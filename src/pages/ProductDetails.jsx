@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(
-          `https://fakestoreapi.com/products/${id}`
+          `https://dummyjson.com/products/${id}`
         );
         setProduct(res.data);
       } catch (error) {
@@ -32,7 +32,7 @@ const ProductDetails = () => {
   return (
     <div className="p-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <img
-        src={product.image}
+        src={product.images[0]}
         alt={product.title}
         className="h-80 object-contain"
       />
